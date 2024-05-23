@@ -1,0 +1,221 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    color: #343434;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.42857143;
+}
+
+p{
+    font-size: 14px;
+    word-spacing: 2px;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.w-70 {
+    width: 70%;
+}
+.w-80 {
+    width: 80%;
+}
+.w-90 {
+    width: 90%;
+}
+.bg-gray{
+    background-color: #f4f4f4;
+}
+
+.section-head h3:after {
+    content: "";
+    width: 100%;
+    height: 30px;
+    background-image: url(../uploads/dots.png);
+    position: absolute;
+    top: 70%;
+    left: 0;
+    z-index: -1;
+}
+
+/* ------------------------- */
+/* NAV */
+.nav-link::after ,
+.works .nav-link::after{
+    content: "";
+    width: 0;
+    padding-block: 1px;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.7s;
+}
+
+.nav-link.active::after,
+.works .nav-link.active::after {
+    width: 100%;
+}
+/* Button */
+nav .container .icon {
+    width: 30px;
+}
+nav .container .icon span {
+    padding-block: 2px;
+}
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+/* NAV */
+/* ------------------------- */
+/* ------------------------- */
+/* main */
+main {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.638),rgba(0, 0, 0, 0.638)) ,url(../uploads/bg.jpeg);
+    background-position: center;
+    background-size: 100% 100%;
+}
+.social-icon a i,
+.team .item .photo .overlay a,
+.works .overlay .overlay-content .icons a{
+    width: 40px;
+    height: 40px;
+    transition: 0.7s
+}
+/* main */
+/* ------------------------- */
+/* about */
+.about .photo::after {
+    content: "";
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    right: 27%;
+    top: 7%;
+    background-image: url(../uploads/dots.png);
+    z-index: -1;
+}
+.btn{
+    transition: 0.7s;
+}
+.trans:hover{
+    background-color: black !important;
+    color: #eee;
+}
+.about .bg-black:hover,
+.contact .bg-black:hover,
+.team .item .photo .overlay a:hover,
+.works .overlay .overlay-content .icons a:hover{
+    background-color: transparent !important;
+    color: black !important;
+}
+/* about */
+
+/* services */
+.circle .border-primary,
+.contact-info i {
+    transition: all 1s ease;
+    height: 80px;
+    width: 80px;
+}
+.card:hover .border-primary,
+.contact-info:hover i {
+    color: #fff;
+    background-color: black;
+    box-shadow: 0 0 0 10px #f4f4f4;
+}
+/* services */
+/* team */
+.overlay{
+    top: 5px;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+    opacity: 0;
+    transition: 0.8s;
+}
+.team .item .photo .overlay{
+    background-color: rgba(255, 255, 255, 0.892);
+    transform: scale(0.5)rotateY(180deg);
+}
+.team .item:hover .overlay {
+    opacity: 1;
+    transform: scale(1) rotateY(0deg);
+}
+.team .item .photo .overlay a:hover{
+    border: 1px solid black;
+    border-radius: 50%;
+}
+.team .item .photo img {
+    transition: 0.5s;
+}
+
+.team .item .photo:hover img {
+    transform: scale(1.2);
+}
+
+.team .item .content {
+    background-color: #5B5B5B;
+}
+/* team */
+/* testo */
+.carousel-indicators [data-bs-target]{
+    width: 1rem;
+    height: 1rem;
+    background-color: #748182;
+    transition: 0.5s;
+}
+.carousel-indicators [data-bs-target]:hover{
+    background-color: #292e2c;
+}
+/* testo */
+/* work */
+.works .overlay{
+    /* ====================== (START UPDATE) ====================== */
+    transform: translateY(10px);
+}
+
+.works .overlay .overlay-content h6 {
+    letter-spacing: 2px;
+    /* ====================== (UPDATE) ====================== */
+    transform: translateY(-15px);
+    transition: 0.8s;
+}
+
+
+.works .item:hover .overlay,
+.works .item:hover h6{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* work */
+/* contact */
+.form-control:focus{
+    box-shadow: none;
+    background-color: #f4f4f4;
+}
+textarea{
+    resize: both;
+}
+/* contact */
+/* footer */
+footer{
+    background: #1c1c1c;
+    padding: 30px;
+}
+footer p{
+    color: #748182;
+    word-spacing: 2px;
+}
+/* footer */
